@@ -1,0 +1,35 @@
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.arrow-up {
+    width: 20px;
+    height: 20px;
+    background-image: url('../img/pfeil-nach-oben.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: transform 0.3s ease;
+}
+
+.scroll-to-top:hover .arrow-up {
+    transform: scale(1.2); 
+}
+
+@keyframes scrollAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.scroll-to-top {
+    animation: scrollAnimation 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
