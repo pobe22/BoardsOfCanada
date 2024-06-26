@@ -1,0 +1,85 @@
+{
+  "siteSettings": {
+    "mainColors": {
+      "color1": "var(--main-color1)",
+      "color2": "var(--main-color2)"
+    },
+    "pages": {
+      "home": {
+        "pagetitle": "Boards of Canada | Home",
+        "h1_headline": "Willkommen in der Welt von Boards of Canada",
+        "h1_text": "Erkunde die Diskografie, Geschichte und aufkommende Events dieses legendären Elektronik-Duos.",
+        "list_data": {
+          "diskografie.html": {
+            "headline": "Empfohlenes Album",
+            "text": "Music Has the Right to Children (1998): Dieses Debütalbum brachte ihnen breite Anerkennung und wird oft als Meilenstein der elektronischen Musik angesehen."
+          },
+          "events.html": {
+            "headline": "Nächstes Event",
+            "text": "Red Rocks Amphitheatre (Juli 2024): Boards of Canada werden im Juli 2024 im Red Rocks Amphitheatre in Colorado auftreten."
+          }
+        }
+      },
+      "diskografie": {
+        "pagetitle": "Boards of Canada | Diskografie",
+        "h1_headline": "Die Diskografie von Boards of Canada",
+        "h1_text": "Entdecke die Alben, EPs und Singles, die weltweit Anerkennung gefunden haben.",
+        "list_data": {
+          "album1": {
+            "headline": "Twoism",
+            "text": "Diese EP war ihre erste offizielle Veröffentlichung und zeigt bereits ihren charakteristischen Sound."
+          },
+          "album2": {
+            "headline": "Music Has the Right to Children",
+            "text": "Dieses Debütalbum brachte ihnen breite Anerkennung und wird oft als Meilenstein der elektronischen Musik angesehen. Es enthält Tracks wie 'Roygbiv' und 'Aquarius'."
+          }
+        }
+      },
+      "about": {
+        "pagetitle": "Boards of Canada | Über uns",
+        "h1_headline": "Über Boards of Canada",
+        "h1_text": "Erfahre mehr über die Hintergründe von Boards of Canada, ihre musikalischen Einflüsse und ihre einzigartige Klanglandschaft.",
+        "list_data": {
+          "section1": {
+            "headline": "Frühe Jahre und Gründung",
+            "text": "Michael und Marcus wuchsen in Cullen, einer kleinen Küstenstadt im Nordosten Schottlands, auf. Schon früh entwickelten sie eine Leidenschaft für Musik und experimentierten mit Aufnahmegeräten."
+          },
+          "section2": {
+            "headline": "Musikstil und Einflüsse",
+            "text": "Boards of Canada ist bekannt für ihre nostalgischen und melancholischen Klanglandschaften, die oft von analogen Synthesizern, bruchstückhaften Samples und subtilen Beats geprägt sind."
+          }
+        }
+      },
+      "events": {
+        "pagetitle": "Boards of Canada | Events",
+        "h1_headline": "Kommende Events von Boards of Canada",
+        "h1_text": "Bleibe auf dem Laufenden über kommende Events und Auftritte von Boards of Canada.",
+        "list_data": {
+          "event1": {
+            "headline": "Red Rocks Amphitheatre",
+            "text": "Boards of Canada werden im Juli 2024 im Red Rocks Amphitheatre in Colorado auftreten."
+          },
+          "event2": {
+            "headline": "London Electronic Music Festival",
+            "text": "Im August 2024 treten Boards of Canada auf dem London Electronic Music Festival auf."
+          }
+        }
+      },
+      "merch": {
+        "pagetitle": "Boards of Canada | Merchandise",
+        "h1_headline": "Boards of Canada Merchandise",
+        "h1_text": "Entdecke exklusive Merchandise-Artikel von Boards of Canada. Hol dir deine Lieblingsstücke und zeige deine Unterstützung für die Band.",
+        "list_data": {
+          "merch1": {
+            "headline": "T-Shirts",
+            "text": "Hochwertige T-Shirts mit exklusiven Designs von Boards of Canada."
+          },
+          "merch2": {
+            "headline": "Vinyls",
+            "text": "Sammlereditionen der Alben von Boards of Canada auf Vinyl."
+          }
+        }
+      }
+    }
+  }
+}

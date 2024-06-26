@@ -13,7 +13,7 @@
   justify-content: start;
 }
 :root {
-  --main-color1: #4863A0; /* Dunkelblau */
+  --main-color1: #ADCBC7; /* Dunkelblau */
   --main-color2: #79A6A0; /* Türkis */
   --main-color3: #6B8E23; /* Dunkelgrün */
   --complementary-color1: #B7410E; /* Rostrot */
@@ -35,8 +35,8 @@ body {
   font-family: "Josefin Sans", sans-serif;
   font-weight: normal;
   font-style: normal;
-  background-color: #ADCBC7;
-  color: var(--main-color2); /* Türkis als Haupttextfarbe */
+  background-color: var(--main-color1);
+  color: var(--main-color2); 
 }
 
 /* line 12, ../../Arafath/CL/Cl November/221. Music/HTML/scss/theme-default.scss */
@@ -106,7 +106,7 @@ h1{
 /* line 41, ../../Arafath/CL/Cl November/221. Music/HTML/scss/theme-default.scss */
 h2, h3, h4, h5 {
   font-family: "Josefin Sans", sans-serif;
-  color: var(--main-color1);
+  color: var(--main-color3);
 }
 
 /* line 45, ../../Arafath/CL/Cl November/221. Music/HTML/scss/theme-default.scss */

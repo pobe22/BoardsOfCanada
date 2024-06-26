@@ -30,15 +30,15 @@
 
     <script src="js/scrolltotop.js"></script>
     <script src="js/getcontent.js"></script>
+    <script src="js/fullscreen.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/cardGenerator.js"></script>
+    <script src="js/configLoader.js"></script>
 
 </head>
 
 <body>
-    <!--[if lte IE 9]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-        <![endif]-->
 
-    <!-- header-start -->
     <header id="header"></header>
     <!-- header-end -->
 
@@ -72,7 +72,9 @@
             <div class="row">
                 <div class="col-xl-12">
                     <div class="about_info">
-                        <h2>Die Welt von Boards of Canada</h2>
+                        <div class="section_title text-center mb-65">
+                            <h2>Die Welt von Boards of Canada</h2>
+                        </div>
                         <br>
                         <br>
                         <h3>Erkunden Sie die <a href="./diskographie.html">Diskografie</a>, <a
@@ -111,8 +113,7 @@
                     <div class="about_info">
                         <h3>Neuer Merch</h3>
                         <br>
-                        <img src="https://imgs.search.brave.com/rai0Vv2uW_mqbwbbY_Bkg6KNCxx7A7Kdhx5-ko3iyEw/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pLmV0/c3lzdGF0aWMuY29t/LzM5Mzk1NzkwL3Iv/aWwvOTA1ZTNiLzQ2/MjQ2MzAzMTUvaWxf/NjAweDYwMC40NjI0/NjMwMzE1XzdiOHku/anBn"
-                            alt="Red Rocks" width="350px" height="350px">
+                        <img src="img/merch.png" alt="Merch" width="350px" height="350px">
                         <p><strong>Boards of Canada Shirt</strong>: Das neue Boards of Canada Shirt ist jetzt
                             erhältlich.</p>
                         <a href="merch.html">Zur allen Merch-Artikeln</a>
@@ -209,7 +210,6 @@
 
     <footer id="footer"></footer>
 
-
     <!-- JS here -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
@@ -239,16 +239,72 @@
     <script src="js/jquery.form.js"></script>
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/mail-script.js"></script>
-
     <script src="js/main.js"></script>
 
+
     <script>
+
         $(function () {
             $('audio').audioPlayer({
 
             });
         });
+
+        function loadContent() {
+            fetch('/json/content.json') // Passe den Pfad zur JSON-Datei entsprechend deiner Umgebung an
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    // Überprüfe, ob die erwarteten Strukturen vorhanden sind
+                    if (!data || !data.home || !data.home.list_data) {
+                        throw new Error('Data structure does not contain expected properties');
+                    }
+
+                    var listData = data.home.list_data; // Zugriff auf list_data
+
+                    // Element finden, in das die Inhalte eingefügt werden sollen
+                    var container = document.getElementById('content-container');
+
+                    // Durchlaufen der list_data und Erstellen von HTML-Elementen
+                    for (var url in listData) {
+                        if (listData.hasOwnProperty(url)) {
+                            var dataItem = listData[url];
+
+                            // Erstellen der HTML-Elemente
+                            var card = document.createElement('div');
+                            card.classList.add('card');
+
+                            var headline = document.createElement('h3');
+                            headline.textContent = dataItem.headline;
+
+                            var paragraph = document.createElement('p');
+                            paragraph.textContent = dataItem.text;
+
+                            var link = document.createElement('a');
+                            link.href = url; // Verwenden der URL als Link
+
+                            link.appendChild(headline);
+                            card.appendChild(link);
+                            card.appendChild(paragraph);
+
+                            // Hinzufügen der Karte zum Container
+                            container.appendChild(card);
+                        }
+                    }
+                })
+                .catch(error => console.error('Error loading JSON:', error));
+        }
+
+
+        // Aufrufen der Funktion zum Laden der Inhalte
+        loadContent();
+
     </script>
+
 </body>
 
 </html>
