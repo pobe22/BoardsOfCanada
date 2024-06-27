@@ -6,7 +6,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Boards of Canada</title>
     <meta name="description"
-        content="Boards of Canada ist ein schottisches electronic music duo bestehend aus den Brüdern Michael Sandison and Marcus Eoin.">
+        content="Boards of Canada ist ein schottisches electronic music duo bestehend aus den Brüdern Michael Sandison und Marcus Eoin.">
     <meta name="keywords"
         content="Boards of Canada, electronic music, duo, Michael Sandison, Marcus Eoin, schottisch, Musik, Elektronik, Musikduo, Musikgeschichte, Diskografie, Events, Merch, Musikgeschichte">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -44,12 +44,12 @@
 
     <!-- slider_area_start -->
     <div class="slider_area">
-        <div class="single_slider  d-flex align-items-center slider_bg_1 overlay2">
+        <div class="single_slider d-flex align-items-center slider_bg_1 overlay2">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-12">
-                        <div class="slider_text text-center ">
-                            <h1>Boards of Canada </h1>
+                        <div class="slider_text text-center">
+                            <h1>Boards of Canada</h1>
                         </div>
                     </div>
                 </div>
@@ -79,8 +79,7 @@
                         <br>
                         <h3>Erkunden Sie die <a href="./diskographie.html">Diskografie</a>, <a
                                 href="./about.html">Geschichte</a> und <a href="./events.html">aufkommende Events</a>
-                            dieses
-                            legendären Elektronik-Duos.</h3>
+                            dieses legendären Elektronik-Duos.</h3>
                     </div>
                     <br>
                 </div>
@@ -124,8 +123,10 @@
             </div>
         </div>
     </div>
+    <!--/ about_area  -->
 
-
+    <div class="container" id="content-container-home">
+    </div>
 
 
     <!-- gallery -->
@@ -202,8 +203,8 @@
             </div>
         </div>
     </div>
-
     <!--/ gallery -->
+
     <a href="#top" class="scroll-to-top">
         <div class="arrow-up"></div>
     </a>
@@ -212,8 +213,8 @@
 
     <!-- JS here -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-        </script>
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
     <script src="js/vendor/modernizr-3.5.0.min.js"></script>
     <script src="js/vendor/jquery-1.12.4.min.js"></script>
     <script src="js/popper.min.js"></script>
@@ -241,69 +242,22 @@
     <script src="js/mail-script.js"></script>
     <script src="js/main.js"></script>
 
-
     <script>
-
-        $(function () {
-            $('audio').audioPlayer({
-
-            });
+        // Sicherstellen, dass der DOM vollständig geladen ist, bevor das Skript ausgeführt wird
+        document.addEventListener('DOMContentLoaded', async () => {
+            const config = await loadConfig();
+            if (config.home && config.home.list_data) {
+                createCards(config.home.list_data);
+            }
         });
-
-        function loadContent() {
-            fetch('/json/content.json') // Passe den Pfad zur JSON-Datei entsprechend deiner Umgebung an
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok');
-                    }
-                    return response.json();
-                })
-                .then(data => {
-                    // Überprüfe, ob die erwarteten Strukturen vorhanden sind
-                    if (!data || !data.home || !data.home.list_data) {
-                        throw new Error('Data structure does not contain expected properties');
-                    }
-
-                    var listData = data.home.list_data; // Zugriff auf list_data
-
-                    // Element finden, in das die Inhalte eingefügt werden sollen
-                    var container = document.getElementById('content-container');
-
-                    // Durchlaufen der list_data und Erstellen von HTML-Elementen
-                    for (var url in listData) {
-                        if (listData.hasOwnProperty(url)) {
-                            var dataItem = listData[url];
-
-                            // Erstellen der HTML-Elemente
-                            var card = document.createElement('div');
-                            card.classList.add('card');
-
-                            var headline = document.createElement('h3');
-                            headline.textContent = dataItem.headline;
-
-                            var paragraph = document.createElement('p');
-                            paragraph.textContent = dataItem.text;
-
-                            var link = document.createElement('a');
-                            link.href = url; // Verwenden der URL als Link
-
-                            link.appendChild(headline);
-                            card.appendChild(link);
-                            card.appendChild(paragraph);
-
-                            // Hinzufügen der Karte zum Container
-                            container.appendChild(card);
-                        }
-                    }
-                })
-                .catch(error => console.error('Error loading JSON:', error));
-        }
-
-
-        // Aufrufen der Funktion zum Laden der Inhalte
-        loadContent();
-
     </script>
+    
+    <script>
+        $(function () {
+            $('audio').audioPlayer({});
+        });
+    </script>
+
 
 </body>
 

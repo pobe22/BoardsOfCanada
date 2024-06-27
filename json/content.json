@@ -10,13 +10,17 @@
         "h1_headline": "Willkommen in der Welt von Boards of Canada",
         "h1_text": "Erkunde die Diskografie, Geschichte und aufkommende Events dieses legendären Elektronik-Duos.",
         "list_data": {
-          "diskografie.html": {
-            "headline": "Empfohlenes Album",
-            "text": "Music Has the Right to Children (1998): Dieses Debütalbum brachte ihnen breite Anerkennung und wird oft als Meilenstein der elektronischen Musik angesehen."
+          "/diskographie/album1": {
+            "headline": "Twoism",
+            "text": "Diese EP war ihre erste offizielle Veröffentlichung und zeigt bereits ihren charakteristischen Sound."
           },
-          "events.html": {
-            "headline": "Nächstes Event",
-            "text": "Red Rocks Amphitheatre (Juli 2024): Boards of Canada werden im Juli 2024 im Red Rocks Amphitheatre in Colorado auftreten."
+          "/merch": {
+            "headline": "Neue Merchandise-Artikel",
+            "text": "T-Shirts und Vinyls: Entdecke exklusive Merchandise-Artikel von Boards of Canada."
+          },
+          "/about": {
+            "headline": "Über die Band",
+            "text": "Erfahre mehr über die Hintergründe von Boards of Canada, ihre musikalischen Einflüsse und ihre einzigartige Klanglandschaft."
           }
         }
       },
