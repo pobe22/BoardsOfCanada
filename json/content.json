@@ -18,7 +18,6 @@
             "headline": "Neue Merchandise-Artikel",
             "text": "T-Shirts und Vinyls: Entdecke exklusive Merchandise-Artikel von Boards of Canada."
           }
-          
         }
       },
       "diskographie": {
@@ -37,6 +36,10 @@
           "album3": {
             "headline": "Geogaddi",
             "text": "Ihr zweites Album ist bekannt für seine düstere und mysteriöse Atmosphäre und enthält Tracks wie '1969' und 'Gyroscope'."
+          },
+          "album4": {
+            "headline": "The Campfire Headphase",
+            "text": "Dieses Album ist von Folk- und Rock-Einflüssen geprägt und enthält Tracks wie 'Peacock Tail' und 'Chromakey Dreamcoat'."
           }
         }
       },

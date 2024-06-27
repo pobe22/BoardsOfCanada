@@ -28,6 +28,8 @@ function createCards(page, listData) {
         columnClass = 'col-md-12';
     } else if (numItems === 2) {
         columnClass = 'col-md-6';
+    } else if (numItems === 4) {
+        columnClass = 'col-md-4 col-xl-3';
     } else {
         columnClass = 'col-md-4';
     }
@@ -57,7 +59,7 @@ function createCards(page, listData) {
         row.appendChild(col);
     });
 
-    // Füge container zu entsprechendem content-container hinzu
+    // Füge container zu entsprechendem content-container
     const contentContainerId = `content-container-${page}`;
     const contentContainer = document.getElementById(contentContainerId);
     if (contentContainer) {
