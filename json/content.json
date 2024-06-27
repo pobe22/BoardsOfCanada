@@ -17,11 +17,8 @@
           "/merch": {
             "headline": "Neue Merchandise-Artikel",
             "text": "T-Shirts und Vinyls: Entdecke exklusive Merchandise-Artikel von Boards of Canada."
-          },
-          "/about": {
-            "headline": "Über die Band",
-            "text": "Erfahre mehr über die Hintergründe von Boards of Canada, ihre musikalischen Einflüsse und ihre einzigartige Klanglandschaft."
           }
+          
         }
       },
       "diskographie": {
