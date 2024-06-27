@@ -12,7 +12,7 @@ async function loadConfig() {
 }
 
 // Funktion zum Erstellen der Karten
-function createCards(listData) {
+function createCards(page, listData) {
     const container = document.createElement('div');
     container.className = 'container';
     const row = document.createElement('div');
@@ -43,14 +43,29 @@ function createCards(listData) {
         row.appendChild(col);
     });
 
-    const contentContainer = document.getElementById('content-container-home');
-    contentContainer.appendChild(container);
+    const contentContainerId = `content-container-${page}`;
+    const contentContainer = document.getElementById(contentContainerId);
+    if (contentContainer) {
+        contentContainer.appendChild(container);
+    }
 }
+
 
 // DOMContentLoaded Eventlistener, um die Karten zu erstellen
 document.addEventListener('DOMContentLoaded', async () => {
-    const data = await loadConfig();
-    if (data && data.siteSettings && data.siteSettings.pages && data.siteSettings.pages.home && data.siteSettings.pages.home.list_data) {
-        createCards(data.siteSettings.pages.home.list_data);
+    try {
+        const data = await loadConfig();
+
+        if (data && data.siteSettings && data.siteSettings.pages) {
+            Object.keys(data.siteSettings.pages).forEach(page => {
+                if (data.siteSettings.pages[page].list_data) {
+                    createCards(page, data.siteSettings.pages[page].list_data);
+                }
+            });
+        }
+    } catch (error) {
+        console.error('Error loading configuration:', error);
+        // Hier können Sie entsprechende Fehlerbehandlung hinzufügen, z.B. eine Fehlermeldung anzeigen
     }
 });
+

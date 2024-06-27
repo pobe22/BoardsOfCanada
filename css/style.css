@@ -16,6 +16,7 @@
   --main-color1: #ADCBC7; /* Dunkelblau */
   --main-color2: #79A6A0; /* Türkis */
   --main-color3: #6B8E23; /* Dunkelgrün */
+  --background-color1: #DAE8E6;
   --complementary-color1: #B7410E; /* Rostrot */
   --complementary-color2: #8B4513; /* Kastanienbraun */
   --neutral-color1: #F4E3D7; /* Sandbeige */
@@ -751,7 +752,7 @@ h3 {
 
 /* line 13, ../../Arafath/CL/Cl November/221. Music/HTML/scss/_slick-nav.scss */
 .slicknav_menu .slicknav_nav {
-  background: #DAE8E6;
+  background: var(--background-color1);
   float: right;
   margin-top: 0;
   padding: 0;
@@ -2043,7 +2044,7 @@ h3 {
   padding-bottom: 50px;
   border-bottom: 1px solid #EFEFEF;
   padding-top: 145px;
-  background: #DAE8E6;
+  background:var(--background-color1);
 }
 
 @media (max-width: 767px) {

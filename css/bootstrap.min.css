@@ -4674,7 +4674,8 @@ tbody.collapse.show {
     word-wrap: break-word;
     background-clip: border-box;
     border: 1px solid rgba(0, 0, 0, .125);
-    border-radius: .25rem
+    border-radius: .25rem;
+    background-color: var(--background-color1);
 }
 
 .card>hr {

@@ -24,7 +24,7 @@
           }
         }
       },
-      "diskografie": {
+      "diskographie": {
         "pagetitle": "Boards of Canada | Diskografie",
         "h1_headline": "Die Diskografie von Boards of Canada",
         "h1_text": "Entdecke die Alben, EPs und Singles, die weltweit Anerkennung gefunden haben.",
@@ -36,6 +36,10 @@
           "album2": {
             "headline": "Music Has the Right to Children",
             "text": "Dieses Debütalbum brachte ihnen breite Anerkennung und wird oft als Meilenstein der elektronischen Musik angesehen. Es enthält Tracks wie 'Roygbiv' und 'Aquarius'."
+          },
+          "album3": {
+            "headline": "Geogaddi",
+            "text": "Ihr zweites Album ist bekannt für seine düstere und mysteriöse Atmosphäre und enthält Tracks wie '1969' und 'Gyroscope'."
           }
         }
       },
@@ -51,6 +55,10 @@
           "section2": {
             "headline": "Musikstil und Einflüsse",
             "text": "Boards of Canada ist bekannt für ihre nostalgischen und melancholischen Klanglandschaften, die oft von analogen Synthesizern, bruchstückhaften Samples und subtilen Beats geprägt sind."
+          },
+          "section3": {
+            "headline": "Aktuelle Projekte",
+            "text": "Nach einer längeren Pause haben Boards of Canada 2023 ihr neues Album 'Tomorrow's Harvest' veröffentlicht. Sie arbeiten auch an der Filmmusik für einen neuen Dokumentarfilm über die schottische Landschaft."
           }
         }
       },
@@ -66,6 +74,10 @@
           "event2": {
             "headline": "London Electronic Music Festival",
             "text": "Im August 2024 treten Boards of Canada auf dem London Electronic Music Festival auf."
+          },
+          "event3": {
+            "headline": "Coachella",
+            "text": "Boards of Canada werden im April 2025 auf dem Coachella Festival in Kalifornien auftreten."
           }
         }
       },
@@ -81,6 +93,10 @@
           "merch2": {
             "headline": "Vinyls",
             "text": "Sammlereditionen der Alben von Boards of Canada auf Vinyl."
+          },
+          "merch3": {
+            "headline": "Poster",
+            "text": "Poster mit einzigartigen Artworks von Boards of Canada."
           }
         }
       }
