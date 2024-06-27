@@ -16,7 +16,10 @@
   --main-color1: #ADCBC7; /* Dunkelblau */
   --main-color2: #79A6A0; /* Türkis */
   --main-color3: #6B8E23; /* Dunkelgrün */
-  --background-color1: #DAE8E6;
+  --text-color1:#75c2b8;
+  --text-color2:#2E7168;
+  --content-color1: #DAE8E6;
+  --content-color2: #8aaaa5;
   --complementary-color1: #B7410E; /* Rostrot */
   --complementary-color2: #8B4513; /* Kastanienbraun */
   --neutral-color1: #F4E3D7; /* Sandbeige */
@@ -37,7 +40,7 @@ body {
   font-weight: normal;
   font-style: normal;
   background-color: var(--main-color1);
-  color: var(--main-color2); 
+  color: var(--text-color1); 
 }
 
 /* line 12, ../../Arafath/CL/Cl November/221. Music/HTML/scss/theme-default.scss */
@@ -136,7 +139,7 @@ p {
   font-size: 16px;
   font-weight: 300;
   line-height: 28px;
-  color: #2E7168;
+  color: var(--text-color1);
   margin-bottom: 13px;
   font-family: "Muli", sans-serif;
 }
@@ -752,7 +755,7 @@ h3 {
 
 /* line 13, ../../Arafath/CL/Cl November/221. Music/HTML/scss/_slick-nav.scss */
 .slicknav_menu .slicknav_nav {
-  background: var(--background-color1);
+  background: var(--content-color1);
   float: right;
   margin-top: 0;
   padding: 0;
@@ -2044,7 +2047,7 @@ h3 {
   padding-bottom: 50px;
   border-bottom: 1px solid #EFEFEF;
   padding-top: 145px;
-  background:var(--background-color1);
+  background:var(--content-color1);
 }
 
 @media (max-width: 767px) {

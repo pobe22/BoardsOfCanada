@@ -7,7 +7,7 @@ function loadButton(){
   tag.appendChild(text);
 
   tag.style.position = "fixed";
-  tag.style.left = "130px";
+  tag.style.left = "10px";
   tag.style.bottom = "10px";
   tag.style.zIndex = "1000";
 

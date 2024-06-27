@@ -34,9 +34,13 @@
     --breakpoint-xl: 1200px;
     --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-    --main-color1: #ADCBC7; /* Hellblau */
+    --main-color1: #ADCBC7; /* Dunkelblau */
     --main-color2: #79A6A0; /* Türkis */
-    --main-color3: #C3D4B6; /* Gelbgrün */
+    --main-color3: #6B8E23; /* Dunkelgrün */
+    --text-color1:#75c2b8;
+    --text-color2:#2E7168;
+    --content-color1: #DAE8E6;
+    --content-color2: #8aaaa5;
     --complementary-color1: #B7410E; /* Rostrot */
     --complementary-color2: #8B4513; /* Kastanienbraun */
     --neutral-color1: #F4E3D7; /* Sandbeige */
@@ -4675,7 +4679,7 @@ tbody.collapse.show {
     background-clip: border-box;
     border: 1px solid rgba(0, 0, 0, .125);
     border-radius: .25rem;
-    background-color: var(--background-color1);
+    background-color: var(--content-color1);
 }
 
 .card>hr {
